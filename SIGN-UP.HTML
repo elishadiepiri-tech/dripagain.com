@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up | DripAgain</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<header class="nav">
+  <h1 class="brand"><a href="index.html">DripAgain</a></h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="donate.html">Donate</a>
+    <a href="shop.html">Shop</a>
+    <a href="sell.html">Sell</a>
+    <a href="login.html">Login</a>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+  </nav>
+</header>
+
+<section class="auth">
+  <h2>Create Account</h2>
+  <input type="text" placeholder="Full Name">
+  <input type="email" placeholder="Email">
+  <input type="password" placeholder="Password">
+  <a href="sell.html" class="btn primary">Sign Up</a>
+  <p>Already have an account? <a href="SIGN-UP.HTML" class="feature"></a></p>
+</section>
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 DripAgain</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="donate.html">Donate</a>
+    <a href="shop.html">Shop</a>
+    <a href="sell.html">Sell</a>
+    <a href="login.html">Login</a>
+  </div>
+</footer>
+
+<script>
+const toggle = document.getElementById("themeToggle");
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donate | DripAgain</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<header class="nav">
+  <h1 class="brand"><a href="index.html">DripAgain</a></h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="sell.html">Sell</a>
+    <a href="login.html">Login</a>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+  </nav>
+</header>
+  <!-- HERO SECTION -->
+<section class="hero">
+  <h2>Donate Your Clothes</h2>
+  <p>Give your gently used clothes a new life. Help others and the planet.</p>
+  <div class="hero-buttons">
+    <a href="start donating.html" class="btn primary">Start Donating</a>
+  </div>
+</section>
+
+<section class="products">
+  <h2>Popular Donations</h2>
+  <div class="grid">
+    <div class="product"><span>Vintage Hoodie</span><strong>₦3,500</strong></div>
+    <div class="product"><span>Denim Jacket</span><strong>₦5,000</strong></div>
+    <div class="product"><span>Streetwear Tee</span><strong>₦2,800</strong></div>
+    <div class="product"><span>Leather Sneakers</span><strong>₦12,000</strong></div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 DripAgain</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="sell.html">Sell</a>
+    <a href="login.html">Login</a>
+  </div>
+</footer>
+
+<script>
+const toggle = document.getElementById("themeToggle");
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+});
+</script>
+</body>
+</html>

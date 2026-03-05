@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DripAgain - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="nav">
+  <h1 class="brand"><a href="index.html">DripAgain</a></h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="DONATE.HTML">Donate</a>
+    <a href="shop.html">Shop</a>
+    <a href="sell.html">Sell</a>
+    <a href="login.html">Login</a>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>Welcome to DripAgain</h2>
+  <p>Donate, sell, or shop fashionable clothes while helping the environment.</p>
+  <div class="hero-buttons">
+    <a href="DONATE.HTML" class="btn primary">Donate Now</a>
+    <a href="shop.html" class="btn secondary">Shop Drip</a>
+    <a href="sell.html" class="btn primary">Sell Your Drip</a>
+  </div>
+
+</section>
+
+<!-- FEATURES GRID -->
+<section class="features">
+  <div class="grid">
+    <a href="DONATE.HTML" class="feature">
+      
+      <h3>Donate Clothes</h3>
+      <p>Help the planet and others by donating your gently used clothes.</p>
+    </a>
+    <a href="sell.html" class="feature">
+      
+      <h3>Sell Your Drip</h3>
+      <p>Earn cash and give your clothes a new home.</p>
+    </a>
+    <a href="shop.html" class="feature">
+      
+      <h3>Shop Trendy</h3>
+      <p>Find unique, recycled fashion pieces for your wardrobe.</p>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 DripAgain</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="DONATE.HTML">Donate</a>
+    <a href="shop.html">Shop</a>
+    <a href="sell.html">Sell</a>
+    <a href="login.html">Login</a>
+  </div>
+</footer>
+
+<script>
+const toggle = document.getElementById("themeToggle");
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+});
+</script>
+</body>
+</html>

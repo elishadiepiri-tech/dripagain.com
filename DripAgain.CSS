@@ -1,0 +1,374 @@
+/* ==========================================
+   RESET & BASE
+========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #f8f9fa, #e0e0e0);
+  color: #222;
+  line-height: 1.6;
+  transition: all 0.5s ease;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+/* ==========================================
+   DARK MODE
+========================================== */
+body.dark {
+  background: linear-gradient(135deg, #121212, #1e1e1e);
+  color: #f1f1f1;
+}
+
+body.dark .nav {
+  background: #1f1f1f;
+}
+
+body.dark .btn.primary {
+  background: #12e44a;
+  color: #121212;
+}
+
+body.dark .btn.secondary {
+  background: #2196f3;
+  color: #fff;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: rgba(255, 225, 225, 0.9,#121212);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-radius: 0 0 20px 20px;
+}
+
+.nav .brand a {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #12e44a, #3a07f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav nav a {
+  margin-left: 2rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav nav a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #12e44a, #3a07f3);
+  background: linear-gradient(90deg, #3a07f3, #12e44a);
+  transition: width 0.3s;
+  border-radius: 2px;
+  margin-top: 3px;
+}
+
+.nav nav a:hover::after {
+  width: 100%;
+}
+
+.theme-toggle {
+  margin-left: 2rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+  border: none;
+  background: transparent;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 85vh;
+  padding: 2rem;
+  background: url('images/hero-bg.jpg') no-repeat center/cover;
+  color: #fff;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(3px);
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  z-index: 1;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin: 1.5rem 0 2.5rem;
+  z-index: 1;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  z-index: 1;
+  flex-wrap: wrap;
+  animation: fadeInUp 1.4s ease forwards;
+}
+
+/* Hero Button Effects */
+.btn {
+  padding: 0.9rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 0.5px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  transition: all 0.4s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg,#12e44a,#3a07f3);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 15px 35px rgba(255,87,34,0.4);
+}
+
+.btn.secondary {
+  background: linear-gradient(90deg,#12e44a,#3a07f3);
+  color: #fff;
+}
+
+.btn.secondary:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 15px 35px rgba(33,150,243,0.4);
+}
+
+/* ==========================================
+   FEATURES GRID (Glassmorphism)
+========================================== */
+.features {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg,#f5f7fa,#e0e0e0);
+}
+
+.features .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 2rem;
+}
+
+.feature {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  text-align: center;
+  padding: 2rem 1rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.feature img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  margin-bottom: 0.5rem;
+  color: #3a07f3,#12e44a;
+  font-weight: 700;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.feature:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* ==========================================
+   PRODUCTS GRID (Neumorphism)
+========================================== */
+.products {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.products h2 {
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #3a07f3,#12e44a;
+}
+
+.products .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 2.5rem;
+}
+
+.product {
+  background: #e0e0e0;
+  border-radius: 25px;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 10px 10px 20px #c0c0c0, -10px -10px 20px #ffffff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.product span {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.product strong {
+  margin-bottom: 1rem;
+  color: #3a07f3,#12e44a;
+}
+
+.product .btn {
+  width: 80%;
+}
+
+.product:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 15px 15px 30px rgba(0,0,0,0.2), -15px -15px 30px rgba(255,255,255,0.2);
+}
+
+/* ==========================================
+   AUTH FORMS (Login / Signup)
+========================================== */
+.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 2rem;
+}
+
+.auth h2 {
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg,#3a07f3,#12e44a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.auth input {
+  width: 350px;
+  max-width: 90%;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.8);
+  box-shadow: inset 5px 5px 15px #d1d1d1, inset -5px -5px 15px #ffffff;
+  transition: all 0.4s ease;
+}
+
+.auth input:focus {
+  border-color: #3a07f3,#12e44a;
+  box-shadow: 0 0 15px rgba(255,87,34,0.4);
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+footer {
+  padding: 3rem 2rem;
+  background: #222;
+  color: #fff;
+  text-align: center;
+}
+
+footer .footer-links {
+  margin-top: 1rem;
+}
+
+footer .footer-links a {
+  margin: 0 0.5rem;
+  color: #3a07f3,#12e44a;
+  transition: color 0.3s;
+}
+
+footer .footer-links a:hover {
+  color: #fff;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media screen and (max-width: 768px) {
+  .hero h2 { font-size: 2.5rem; }
+  .hero p { font-size: 1.1rem; }
+  .hero-buttons { flex-direction: column; }
+  .nav { flex-direction: column; align-items: flex-start; }
+  .nav nav { margin-top: 1rem; }
+  .auth input { width: 90%; }
+}
+
+@media screen and (max-width: 480px) {
+  .hero h2 { font-size: 2rem; }
+  .products .grid,
+  .features .grid { grid-template-columns: 1fr; }
+}

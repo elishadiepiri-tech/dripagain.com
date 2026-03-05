@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Start Selling | DripAgain</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+
+<header class="nav">
+  <h1 class="brand"><a href="index.html">DripAgain</a></h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="donate.html">Donate</a>
+    <a href="shop.html">Shop</a>
+    <a href="sell.html">Sell</a>
+    <a href="login.html">Login</a>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Start Selling Your Clothes</h2>
+  <p>Upload your items in a few simple steps and start earning today.</p>
+</section>
+
+<section class="selling-steps">
+  <h2 class="section-title">How It Works</h2>
+
+  <div class="steps-grid">
+    <div class="step">
+      <h3>1. Create an Account</h3>
+      <p>Sign up to list your clothes for sale and track your earnings.</p>
+      <a href="SIGN-UP.html" class="btn primary">Sign Up</a>
+    </div>
+
+    <div class="step">
+      <h3>2. Log In</h3>
+      <p>Already a seller? Continue listing your clothes.</p>
+      <a href="login.html" class="btn secondary">Log In</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 DripAgain</p>
+</footer>
+
+<script>
+const toggle = document.getElementById("themeToggle");
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+});
+</script>
+
+</body>
+</html>
